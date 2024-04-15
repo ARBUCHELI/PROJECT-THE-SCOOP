@@ -12,7 +12,27 @@ users:
       - 1
   test@buchmail.com:
     username: test@buchmail.com
+    articleIds:
+      - 3
+    commentIds: []
+  test1@buchmail.com:
+    username: test1@buchmail.com
+    articleIds:
+      - 4
+    commentIds: []
+  test@gmail.com:
+    username: test@gmail.com
     articleIds: []
+    commentIds: []
+  test3@gmail.com:
+    username: test3@gmail.com
+    articleIds:
+      - 5
+    commentIds: []
+  test4@gmail.com:
+    username: test4@gmail.com
+    articleIds:
+      - 6
     commentIds: []
 articles:
   '1':
@@ -21,9 +41,10 @@ articles:
     url: 'http://www.google.com'
     username: asdb
     commentIds: []
-    upvotedBy:
+    upvotedBy: []
+    downvotedBy:
       - test@buchmail.com
-    downvotedBy: []
+      - test4@gmail.com
     comments: []
   '2':
     id: 2
@@ -32,7 +53,8 @@ articles:
     username: mdol
     commentIds:
       - 1
-    upvotedBy: []
+    upvotedBy:
+      - test4@gmail.com
     downvotedBy:
       - mdol
       - test@buchmail.com
@@ -44,7 +66,45 @@ articles:
         articleId: 2
         upvotedBy: []
         downvotedBy: []
-nextArticleId: 3
+  '3':
+    id: 3
+    title: 'MARIO LESS, A NIGHTMARE, A FILTER, OR A NECESSARY HARVARD RITE OF PASSAGE!'
+    url: 'https://my-tech-blog-bucheli-web.netlify.app/pages/blog-post-1'
+    username: test@buchmail.com
+    commentIds: []
+    upvotedBy:
+      - test1@buchmail.com
+    downvotedBy: []
+  '4':
+    id: 4
+    title: 'MARIO MORE, THE NEXT STEP TOWARDS CONQUERING YOUR FEARS'
+    url: 'https://my-tech-blog-bucheli-web.netlify.app/pages/blog-post-2'
+    username: test1@buchmail.com
+    commentIds: []
+    upvotedBy:
+      - test1@buchmail.com
+      - test@gmail.com
+      - test3@gmail.com
+      - test4@gmail.com
+    downvotedBy: []
+  '5':
+    id: 5
+    title: CRAZY TYPES OF HARVARD’S CS50 STUDENTS YOU DON’T WANT TO LOOK LIKE
+    url: 'https://my-tech-blog-bucheli-web.netlify.app/pages/blog-post-3'
+    username: test3@gmail.com
+    commentIds: []
+    upvotedBy: []
+    downvotedBy: []
+  '6':
+    id: 6
+    title: DON’T PANIC WITH CS50 IDE AND COMMAND LINE
+    url: 'https://my-tech-blog-bucheli-web.netlify.app/pages/blog-post-4'
+    username: test4@gmail.com
+    commentIds: []
+    upvotedBy: []
+    downvotedBy:
+      - test4@gmail.com
+nextArticleId: 7
 comments:
   '1': *ref_0
 nextCommentId: 2
